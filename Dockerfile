@@ -1,6 +1,6 @@
-FROM alpine:3.18
+FROM --platform=linux/amd64 ubuntu:latest
 
-RUN apk add --no-cache git bash openssh
+RUN apt-get install git bash openssh
 
 COPY ./workshop_demo /usr/local/bin/workshop_demo
 
